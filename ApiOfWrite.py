@@ -103,7 +103,7 @@ def sendEmail(a,subject,content):
                              },
                  'saveToSentItems': 'true'}            
     apiReq('post',a,url,json.dumps(mailmessage))
-    printf('ontent', mailmessage)
+    printf('Content', mailmessage)
 	
 #修改excel(这函数分离好像意义不大)
 #api-获取itemid: https://graph.microsoft.com/v1.0/me/drive/root/search(q='.xlsx')?select=name,id,webUrl
@@ -218,6 +218,8 @@ for a in range(1, int(app_num)+1):
     print('发送邮件 ( 邮箱单独运行，每次运行只发送一次，防止封号 )')
     if emailaddress != '':
         sendEmail(a,'weather',weather)
+	printf('weather',weather)
+	
 print('')
 #其他api
 for _ in range(1,config['rounds']+1):
