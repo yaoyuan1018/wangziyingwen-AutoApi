@@ -103,7 +103,6 @@ def sendEmail(a,subject,content):
                              },
                  'saveToSentItems': 'true'}            
     apiReq('post',a,url,json.dumps(mailmessage))
-    printf('Content', mailmessage)
 	
 #修改excel(这函数分离好像意义不大)
 #api-获取itemid: https://graph.microsoft.com/v1.0/me/drive/root/search(q='.xlsx')?select=name,id,webUrl
