@@ -1,4 +1,4 @@
-#每周1，4，6自动更新refresh_token
+#每周2，4，6自动更新refresh_token
 name: Update Token
 
 on: 
@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '10 10 * * 2-6'
+    - cron: '10 10 * * 2,4,6'
   watch:
     types: [started]
    
